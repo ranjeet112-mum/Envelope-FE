@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Nanum+Gothic+Coding&display=swap');
+
+$globalBackground: rgb(250, 250, 250);
+$background: rgb(233, 233, 233);
+$primary: #1063B7;
+$secondary: #4A4A4A;
+
+:root {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background-color: $globalBackground;
+}
+
+.header {
+    background-color: $background;
+    margin: 0.2vh 0.2vw 0;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-bottom: 0.5px solid $secondary;
+
+    height: 7vh;
+
+    .header-nav {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2vw;
+        // align-items: flex-end;
+
+        .app-logo {
+            height: 100%;
+            padding: 0;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+
+
+            img {
+                height: 70%;
+            }
+
+            .app-name {
+                height: 88%;
+                display: inline-flex;
+                align-items: flex-end;
+                font-family: 'Josefin Sans', sans-serif;
+                font-weight: 600;
+                font-size: 26px;
+                color: $secondary;
+            }
+
+
+        }
+
+        .header-nav-list {
+            // width: 10%;
+            // background-color: $secondary;
+            display: inline-flex;
+            justify-content: space-evenly;
+
+
+            .nav-ele {
+                // background-color: lightcoral;
+                height: 35%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 1vh;
+                padding: 1.3vh 1vw;
+                margin-left: 0.2vw;
+                text-decoration: none;
+                color: $secondary;
+                border: 1px solid $secondary;
+                border-radius: 2px;
+                transition: font-size 0.2s;
+
+                &:hover {
+                    font-size: 18px;
+                }
+            }
+
+            > :first-child {
+                // box-shadow: -1px 0 10px $secondary;
+                background-color: $secondary;
+                color: $globalBackground;
+            }
+
+
+        }
+    }
+}
+
+
+.loader {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+    border-left: 3px solid $primary;
+    animation: loading 1s infinite;
+
+}
+
+@keyframes loading {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+.divider {
+    width: 99%;
+    border: none;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 0.5px solid $secondary;
+}
